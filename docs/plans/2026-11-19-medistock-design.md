@@ -68,3 +68,25 @@ npm run lint
 
 Perform a browser smoke pass covering landing-to-dashboard navigation, inventory
 filtering, opening a medicine modal, theme toggling, and responsive layout.
+
+## Approved implementation decisions
+
+- Product scope: single-pharmacy operations with local Zustand persistence.
+- Delivery approach: route-first product shell, followed by workflow pages and
+  the focused 3D experience.
+- Routes: `/`, `/dashboard`, `/inventory`, `/expiry-alerts`, `/suppliers`, and
+  `/reports`.
+- Zustand remains the source of truth for medicines, suppliers, transactions,
+  notifications, filters, selected medicine, and local mutations. Derived
+  selectors keep all pages consistent.
+- The shared shell includes a responsive sidebar, topbar, notification drawer,
+  profile menu, mobile navigation, and route outlet.
+- The 3D scene is limited to the landing hero and a compact dashboard visual.
+  It uses a labeled focal bottle, pharmacy inventory objects, shared
+  geometries/materials, capped DPR, reduced-motion checks, lazy loading, and a
+  CSS fallback for WebGL failure.
+- Reports export client-side CSV files from current application data; no
+  backend-shaped fake export success is permitted.
+- Validation includes build/lint plus browser checks for every route, filters,
+  modal actions, export, responsive layout, console errors, and reduced-motion
+  or WebGL fallback behavior.
