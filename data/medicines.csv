@@ -1,0 +1,41 @@
+medicine_id,medicine_name,category,form,manufacturer,batch_number,quantity,minimum_stock,unit_price,manufacturing_date,expiry_date,supplier
+MED001,Paracetamol 500mg,Analgesic,Tablet,GlaxoSmithKline,BCH-2501A,180,50,1.5,2025-05-15,2027-05-15,MedLine Distributors
+MED002,Amoxicillin 500mg,Antibiotic,Capsule,Cipla Ltd,BCH-2412B,35,40,4.8,2024-12-08,2026-12-08,Apollo Wholesale Pharma
+MED003,Azithromycin 250mg,Antibiotic,Tablet,Pfizer,BCH-2411C,26,25,6.5,2024-11-24,2026-11-24,PrimeCare Pharma Distributors
+MED004,Cetirizine 10mg,Antihistamine,Tablet,Dr. Reddy's,BCH-2506D,140,40,2.2,2025-06-20,2027-06-20,HealthBridge Supply Co.
+MED005,Ibuprofen 400mg,Analgesic,Tablet,Abbott Healthcare,BCH-2411E,42,30,2.75,2024-11-15,2026-11-15,MedLine Distributors
+MED006,Omeprazole 20mg,Antacid,Capsule,Sun Pharma,BCH-2508F,42,35,3.9,2025-08-10,2027-08-10,Apollo Wholesale Pharma
+MED007,Metformin 500mg,Antidiabetic,Tablet,Sanofi,BCH-2509G,165,50,3.4,2025-09-01,2027-09-01,CarePlus Medical Logistics
+MED008,Pantoprazole 40mg,Antacid,Tablet,Sun Pharma,BCH-2507H,18,25,4.25,2025-07-12,2027-07-12,Apollo Wholesale Pharma
+MED009,Vitamin D3 60000 IU,Vitamin & Supplement,Capsule,Abbott Healthcare,BCH-2510I,110,30,5.6,2025-10-05,2027-10-05,HealthBridge Supply Co.
+MED010,Oral Rehydration Salts (ORS),Hydration & Electrolyte,Powder,Cipla Ltd,BCH-2412J,95,50,1.2,2024-12-15,2026-12-15,MedLine Distributors
+MED011,Dextromethorphan Cough Syrup,Respiratory,Syrup,GlaxoSmithKline,BCH-2410K,18,15,5.9,2024-10-25,2026-10-25,PrimeCare Pharma Distributors
+MED012,Insulin Glargine 100 IU/mL,Antidiabetic,Injection,Sanofi,BCH-2505L,12,15,28.5,2025-05-26,2026-11-26,CarePlus Medical Logistics
+MED013,Nitrile Examination Gloves,Medical Supplies,Supplies,3M Healthcare,BCH-2504M,125,40,9.75,2025-04-01,2028-04-01,CarePlus Medical Logistics
+MED014,Diclofenac Sodium 50mg,Analgesic,Tablet,Novartis,BCH-2503N,90,30,3.1,2025-03-18,2027-03-18,MedLine Distributors
+MED015,Aspirin 75mg,Analgesic,Tablet,Bayer Healthcare,BCH-2511O,210,60,1.8,2025-11-10,2027-11-10,HealthBridge Supply Co.
+MED016,Naproxen 250mg,Analgesic,Tablet,Dr. Reddy's,BCH-2601P,75,25,4.1,2026-01-15,2028-01-15,Apollo Wholesale Pharma
+MED017,Ciprofloxacin 500mg,Antibiotic,Tablet,Cipla Ltd,BCH-2509Q,0,30,5.4,2025-09-30,2027-09-30,PrimeCare Pharma Distributors
+MED018,Cefixime 200mg,Antibiotic,Tablet,Lupin Pharma,BCH-2508R,15,20,7.2,2025-08-22,2027-08-22,Apollo Wholesale Pharma
+MED019,Doxycycline 100mg,Antibiotic,Capsule,Zydus Lifesciences,BCH-2412S,44,25,4.6,2024-12-03,2026-12-03,PrimeCare Pharma Distributors
+MED020,Loratadine 10mg,Antihistamine,Tablet,Bayer Healthcare,BCH-2510T,88,30,3.25,2025-10-14,2027-10-14,HealthBridge Supply Co.
+MED021,Fexofenadine 120mg,Antihistamine,Tablet,Sanofi,BCH-2507U,28,20,5.8,2025-07-05,2027-07-05,CarePlus Medical Logistics
+MED022,Famotidine 20mg,Antacid,Tablet,Dr. Reddy's,BCH-2411V,28,20,2.9,2024-11-04,2026-11-04,MedLine Distributors
+MED023,Antacid Mint Suspension,Antacid,Syrup,Abbott Healthcare,BCH-2602W,64,25,4.75,2026-02-10,2028-02-10,Apollo Wholesale Pharma
+MED024,Glimepiride 2mg,Antidiabetic,Tablet,Sanofi,BCH-2512X,96,30,4.5,2025-12-01,2027-12-01,CarePlus Medical Logistics
+MED025,Sitagliptin 50mg,Antidiabetic,Tablet,Novartis,BCH-2601Y,10,15,16.4,2026-01-20,2028-01-20,PrimeCare Pharma Distributors
+MED026,Vitamin C 500mg,Vitamin & Supplement,Tablet,Zydus Lifesciences,BCH-2511Z,150,40,2.6,2025-11-15,2027-11-15,HealthBridge Supply Co.
+MED027,Vitamin B-Complex,Vitamin & Supplement,Capsule,Pfizer,BCH-2412AA,60,30,3.8,2024-12-18,2026-12-18,HealthBridge Supply Co.
+MED028,Calcium + Vitamin D3,Vitamin & Supplement,Tablet,Lupin Pharma,BCH-2603AB,115,35,4.95,2026-03-05,2028-03-05,MedLine Distributors
+MED029,Iron & Folic Acid,Vitamin & Supplement,Tablet,Cipla Ltd,BCH-2510AC,130,40,2.4,2025-10-25,2027-10-25,Apollo Wholesale Pharma
+MED030,Amlodipine 5mg,Cardiovascular,Tablet,Pfizer,BCH-2509AD,40,30,3.7,2025-09-12,2027-09-12,PrimeCare Pharma Distributors
+MED031,Atorvastatin 10mg,Cardiovascular,Tablet,Sun Pharma,BCH-2506AE,20,25,6.1,2025-06-30,2027-06-30,Apollo Wholesale Pharma
+MED032,Losartan 50mg,Cardiovascular,Tablet,Novartis,BCH-2602AF,82,30,5.2,2026-02-18,2028-02-18,CarePlus Medical Logistics
+MED033,Salbutamol Inhaler 100mcg,Respiratory,Inhaler,GlaxoSmithKline,BCH-2511AG,0,20,11.5,2025-11-15,2027-11-15,PrimeCare Pharma Distributors
+MED034,Montelukast 10mg,Respiratory,Tablet,Lupin Pharma,BCH-2601AH,72,25,6.8,2026-01-08,2028-01-08,HealthBridge Supply Co.
+MED035,Hydrocortisone 1% Cream,Dermatological,Cream,GlaxoSmithKline,BCH-2410AI,14,12,5.3,2024-10-10,2026-10-10,MedLine Distributors
+MED036,Clotrimazole 1% Cream,Dermatological,Cream,Bayer Healthcare,BCH-2508AJ,22,18,4.4,2025-08-15,2027-08-15,HealthBridge Supply Co.
+MED037,Carboxymethylcellulose 0.5% Eye Drops,Ophthalmic,Drops,Abbott Healthcare,BCH-2505AK,22,15,7.9,2025-05-23,2026-11-23,CarePlus Medical Logistics
+MED038,Povidone-Iodine 5% Solution,Antiseptic & First Aid,Solution,Zydus Lifesciences,BCH-2412AL,32,20,3.6,2024-12-12,2026-12-12,MedLine Distributors
+MED039,Sterile Gauze Bandage Roll,Medical Supplies,Supplies,3M Healthcare,BCH-2506AM,160,50,2.1,2025-06-01,2028-06-01,CarePlus Medical Logistics
+MED040,Disposable Syringes 5mL,Medical Supplies,Supplies,3M Healthcare,BCH-2604AN,240,80,0.85,2026-04-10,2029-04-10,MedLine Distributors

@@ -1,0 +1,19 @@
+Metric,Value
+Generated Date/Time,2026-11-20 23:31:01
+Total Medicines,40
+Total Stock Units,2915
+Total Inventory Value,10618.50
+Average Medicine Price,5.38
+Average Stock Quantity,72.88
+Out of Stock Count,2
+Low Stock Count (<= Min Stock),8
+Approaching Reorder Count,10
+Expired Medicine Count,4
+Expiring Within 7 Days Count,3
+Expiring Within 30 Days Count,8
+Safe Expiry Count,28
+Critical Alerts,6
+Warning Alerts,14
+Info Alerts,6
+Top Categories (By Count),Analgesic (5); Antibiotic (5); Vitamin & Supplement (5); Antacid (4); Antidiabetic (4)
+Top Categories (By Value),"Vitamin & Supplement ($2,115.25); Medical Supplies ($1,758.75); Antidiabetic ($1,499.00); Analgesic ($1,350.00); Antihistamine ($756.40)"

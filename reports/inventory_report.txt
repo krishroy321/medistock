@@ -1,0 +1,111 @@
+==============================================================================
+                     MEDISTOCK PHARMACY INVENTORY REPORT                      
+                        Generated: 2026-11-20 23:31:01                        
+==============================================================================
+
+1. INVENTORY OVERVIEW
+------------------------------------------------------------------------------
+  Total Medicines           : 40
+  Total Stock Units         : 2,915
+  Total Inventory Value     : $10,618.50
+  Average Unit Price        : $5.38
+  Average Stock Quantity    : 72.88 units
+  Out-of-Stock Medicines    : 2
+  Low-Stock Medicines       : 8
+  Approaching Reorder Level : 10
+  Expired Medicines         : 4
+  Expiring Within 7 Days    : 3
+  Expiring Within 30 Days   : 8
+  Safe Stock (Expiry > 30d) : 28
+
+2. TOP CATEGORIES BY MEDICINE COUNT
+------------------------------------------------------------------------------
+  1. Analgesic                      5 medicines | Value: $1,350.00
+  2. Antibiotic                     5 medicines | Value: $647.40
+  3. Vitamin & Supplement           5 medicines | Value: $2,115.25
+  4. Antacid                        4 medicines | Value: $625.50
+  5. Antidiabetic                   4 medicines | Value: $1,499.00
+
+3. PRIORITY ALERTS SUMMARY
+------------------------------------------------------------------------------
+  CRITICAL alerts : 6
+  WARNING alerts  : 14
+  INFO alerts     : 6
+
+  [CRITICAL]
+    - MED035 | Hydrocortisone 1% Cream | Expired on 10-10-2026 (41 day(s) ago) | Qty: 14 | Expiry: 10-10-2026 | Action: Remove from active stock immediately and quarantine for disposal
+    - MED011 | Dextromethorphan Cough Syrup | Expired on 25-10-2026 (26 day(s) ago) | Qty: 18 | Expiry: 25-10-2026 | Action: Remove from active stock immediately and quarantine for disposal
+    - MED022 | Famotidine 20mg | Expired on 04-11-2026 (16 day(s) ago) | Qty: 28 | Expiry: 04-11-2026 | Action: Remove from active stock immediately and quarantine for disposal
+    - MED005 | Ibuprofen 400mg | Expired on 15-11-2026 (5 day(s) ago) | Qty: 42 | Expiry: 15-11-2026 | Action: Remove from active stock immediately and quarantine for disposal
+    - MED017 | Ciprofloxacin 500mg | Out of stock (0 units available; minimum required: 30) | Qty: 0 | Expiry: 30-09-2027 | Action: Place urgent reorder of 60 units from PrimeCare Pharma Distributors
+    - MED033 | Salbutamol Inhaler 100mcg | Out of stock (0 units available; minimum required: 20) | Qty: 0 | Expiry: 15-11-2027 | Action: Place urgent reorder of 40 units from PrimeCare Pharma Distributors
+
+  [WARNING]
+    - MED037 | Carboxymethylcellulose 0.5% Eye Drops | Expires in 3 day(s) on 23-11-2026 (URGENT <= 7 days) | Qty: 22 | Expiry: 23-11-2026 | Action: Prioritize dispensing (FEFO) or prepare return/replacement batch
+    - MED003 | Azithromycin 250mg | Expires in 4 day(s) on 24-11-2026 (URGENT <= 7 days) | Qty: 26 | Expiry: 24-11-2026 | Action: Prioritize dispensing (FEFO) or prepare return/replacement batch
+    - MED012 | Insulin Glargine 100 IU/mL | Expires in 6 day(s) on 26-11-2026 (URGENT <= 7 days) | Qty: 12 | Expiry: 26-11-2026 | Action: Prioritize dispensing (FEFO) or prepare return/replacement batch
+    - MED019 | Doxycycline 100mg | Expires in 13 day(s) on 03-12-2026 (within 30 days) | Qty: 44 | Expiry: 03-12-2026 | Action: Move to front shelf (FEFO) and plan replacement stock
+    - MED002 | Amoxicillin 500mg | Expires in 18 day(s) on 08-12-2026 (within 30 days) | Qty: 35 | Expiry: 08-12-2026 | Action: Move to front shelf (FEFO) and plan replacement stock
+    - MED038 | Povidone-Iodine 5% Solution | Expires in 22 day(s) on 12-12-2026 (within 30 days) | Qty: 32 | Expiry: 12-12-2026 | Action: Move to front shelf (FEFO) and plan replacement stock
+    - MED010 | Oral Rehydration Salts (ORS) | Expires in 25 day(s) on 15-12-2026 (within 30 days) | Qty: 95 | Expiry: 15-12-2026 | Action: Move to front shelf (FEFO) and plan replacement stock
+    - MED027 | Vitamin B-Complex | Expires in 28 day(s) on 18-12-2026 (within 30 days) | Qty: 60 | Expiry: 18-12-2026 | Action: Move to front shelf (FEFO) and plan replacement stock
+    - MED025 | Sitagliptin 50mg | Low stock (10 units <= minimum 15) | Qty: 10 | Expiry: 20-01-2028 | Action: Restock approximately 20 units from PrimeCare Pharma Distributors
+    - MED012 | Insulin Glargine 100 IU/mL | Low stock (12 units <= minimum 15) | Qty: 12 | Expiry: 26-11-2026 | Action: Restock approximately 18 units from CarePlus Medical Logistics
+    - MED018 | Cefixime 200mg | Low stock (15 units <= minimum 20) | Qty: 15 | Expiry: 22-08-2027 | Action: Restock approximately 25 units from Apollo Wholesale Pharma
+    - MED008 | Pantoprazole 40mg | Low stock (18 units <= minimum 25) | Qty: 18 | Expiry: 12-07-2027 | Action: Restock approximately 32 units from Apollo Wholesale Pharma
+    - MED031 | Atorvastatin 10mg | Low stock (20 units <= minimum 25) | Qty: 20 | Expiry: 30-06-2027 | Action: Restock approximately 30 units from Apollo Wholesale Pharma
+    - MED002 | Amoxicillin 500mg | Low stock (35 units <= minimum 40) | Qty: 35 | Expiry: 08-12-2026 | Action: Restock approximately 45 units from Apollo Wholesale Pharma
+
+  [INFO]
+    - MED003 | Azithromycin 250mg | Approaching minimum stock (26 units; only 1 above minimum 25) | Qty: 26 | Expiry: 24-11-2026 | Action: Schedule routine purchase order with PrimeCare Pharma Distributors
+    - MED036 | Clotrimazole 1% Cream | Approaching minimum stock (22 units; only 4 above minimum 18) | Qty: 22 | Expiry: 15-08-2027 | Action: Schedule routine purchase order with HealthBridge Supply Co.
+    - MED006 | Omeprazole 20mg | Approaching minimum stock (42 units; only 7 above minimum 35) | Qty: 42 | Expiry: 10-08-2027 | Action: Schedule routine purchase order with Apollo Wholesale Pharma
+    - MED037 | Carboxymethylcellulose 0.5% Eye Drops | Approaching minimum stock (22 units; only 7 above minimum 15) | Qty: 22 | Expiry: 23-11-2026 | Action: Schedule routine purchase order with CarePlus Medical Logistics
+    - MED021 | Fexofenadine 120mg | Approaching minimum stock (28 units; only 8 above minimum 20) | Qty: 28 | Expiry: 05-07-2027 | Action: Schedule routine purchase order with CarePlus Medical Logistics
+    - MED030 | Amlodipine 5mg | Approaching minimum stock (40 units; only 10 above minimum 30) | Qty: 40 | Expiry: 12-09-2027 | Action: Schedule routine purchase order with PrimeCare Pharma Distributors
+
+4. COMPLETE MEDICINE VALUATION SNAPSHOT
+------------------------------------------------------------------------------
+  ID       Medicine Name                      Qty  Unit Price  Total Value Expiry      Status
+  ------------------------------------------------------------------------------------------------
+  MED001   Paracetamol 500mg                  180       $1.50      $270.00 15-05-2027  Safe
+  MED002   Amoxicillin 500mg                   35       $4.80      $168.00 08-12-2026  Expiring Within 30 Days
+  MED003   Azithromycin 250mg                  26       $6.50      $169.00 24-11-2026  Expiring Within 7 Days
+  MED004   Cetirizine 10mg                    140       $2.20      $308.00 20-06-2027  Safe
+  MED005   Ibuprofen 400mg                     42       $2.75      $115.50 15-11-2026  Expired
+  MED006   Omeprazole 20mg                     42       $3.90      $163.80 10-08-2027  Safe
+  MED007   Metformin 500mg                    165       $3.40      $561.00 01-09-2027  Safe
+  MED008   Pantoprazole 40mg                   18       $4.25       $76.50 12-07-2027  Safe
+  MED009   Vitamin D3 60000 IU                110       $5.60      $616.00 05-10-2027  Safe
+  MED010   Oral Rehydration Salts (ORS)        95       $1.20      $114.00 15-12-2026  Expiring Within 30 Days
+  MED011   Dextromethorphan Cough Syrup        18       $5.90      $106.20 25-10-2026  Expired
+  MED012   Insulin Glargine 100 IU/mL          12      $28.50      $342.00 26-11-2026  Expiring Within 7 Days
+  MED013   Nitrile Examination Gloves         125       $9.75    $1,218.75 01-04-2028  Safe
+  MED014   Diclofenac Sodium 50mg              90       $3.10      $279.00 18-03-2027  Safe
+  MED015   Aspirin 75mg                       210       $1.80      $378.00 10-11-2027  Safe
+  MED016   Naproxen 250mg                      75       $4.10      $307.50 15-01-2028  Safe
+  MED017   Ciprofloxacin 500mg                  0       $5.40        $0.00 30-09-2027  Safe
+  MED018   Cefixime 200mg                      15       $7.20      $108.00 22-08-2027  Safe
+  MED019   Doxycycline 100mg                   44       $4.60      $202.40 03-12-2026  Expiring Within 30 Days
+  MED020   Loratadine 10mg                     88       $3.25      $286.00 14-10-2027  Safe
+  MED021   Fexofenadine 120mg                  28       $5.80      $162.40 05-07-2027  Safe
+  MED022   Famotidine 20mg                     28       $2.90       $81.20 04-11-2026  Expired
+  MED023   Antacid Mint Suspension             64       $4.75      $304.00 10-02-2028  Safe
+  MED024   Glimepiride 2mg                     96       $4.50      $432.00 01-12-2027  Safe
+  MED025   Sitagliptin 50mg                    10      $16.40      $164.00 20-01-2028  Safe
+  MED026   Vitamin C 500mg                    150       $2.60      $390.00 15-11-2027  Safe
+  MED027   Vitamin B-Complex                   60       $3.80      $228.00 18-12-2026  Expiring Within 30 Days
+  MED028   Calcium + Vitamin D3               115       $4.95      $569.25 05-03-2028  Safe
+  MED029   Iron & Folic Acid                  130       $2.40      $312.00 25-10-2027  Safe
+  MED030   Amlodipine 5mg                      40       $3.70      $148.00 12-09-2027  Safe
+  MED031   Atorvastatin 10mg                   20       $6.10      $122.00 30-06-2027  Safe
+  MED032   Losartan 50mg                       82       $5.20      $426.40 18-02-2028  Safe
+  MED033   Salbutamol Inhaler 100mcg            0      $11.50        $0.00 15-11-2027  Safe
+  MED034   Montelukast 10mg                    72       $6.80      $489.60 08-01-2028  Safe
+  MED035   Hydrocortisone 1% Cream             14       $5.30       $74.20 10-10-2026  Expired
+  MED036   Clotrimazole 1% Cream               22       $4.40       $96.80 15-08-2027  Safe
+  MED037   Carboxymethylcellulose 0.5% Eye     22       $7.90      $173.80 23-11-2026  Expiring Within 7 Days
+  MED038   Povidone-Iodine 5% Solution         32       $3.60      $115.20 12-12-2026  Expiring Within 30 Days
+  MED039   Sterile Gauze Bandage Roll         160       $2.10      $336.00 01-06-2028  Safe
+  MED040   Disposable Syringes 5mL            240       $0.85      $204.00 10-04-2029  Safe
+==============================================================================
