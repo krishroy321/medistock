@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Reports — MediStock{% endblock %}
+{% block content %}
+<div class="page-heading"><div><p class="eyebrow">Exports & charts</p><h1>Reports</h1></div><form method="post"><input type="hidden" name="_csrf_token" value="{{ csrf_token }}"><button class="button primary" type="submit">Generate Reports</button></form></div>
+<section class="report-grid">{% for file in files %}<article class="panel report-card"><span class="report-icon">{{ file.type|upper }}</span><div><h3>{{ file.label }}</h3><p>{% if file.exists %}Ready · {{ (file.size/1024)|round(1) }} KB{% else %}Not generated yet{% endif %}</p></div>{% if file.exists %}<a class="button secondary" href="{{ url_for('download_report', report_type=file.type) }}">Download</a>{% endif %}</article>{% endfor %}</section>
+<section class="panel chart-downloads"><div class="panel-heading"><h3>Matplotlib charts</h3></div><div class="report-grid">{% for name,label in [('medicines','Medicines by Category'),('stock','Stock by Category'),('value','Inventory Value'),('expiry','Expiry Status')] %}<article class="report-card"><span class="report-icon">PNG</span><div><h3>{{ label }}</h3><p>Generated chart</p></div><a class="button secondary" href="{{ url_for('download_chart', chart_name=name) }}">Download</a></article>{% endfor %}</div></section>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — MediStock{% endblock %}
+{% block content %}
+<div class="page-heading">
+  <div><p class="eyebrow">Pharmacy overview</p><h1>Dashboard</h1></div>
+  <a class="button primary" href="{{ url_for('add_medicine') }}">＋ Add Medicine</a>
+</div>
+<section class="kpi-grid">
+  <article class="kpi-card"><span class="kpi-icon blue">▦</span><div><p>Total Medicines</p><h2>{{ overview.total_medicines }}</h2></div></article>
+  <article class="kpi-card"><span class="kpi-icon teal">▤</span><div><p>Total Stock Units</p><h2>{{ overview.total_stock_units }}</h2></div></article>
+  <article class="kpi-card"><span class="kpi-icon violet">$</span><div><p>Inventory Value</p><h2>{{ overview.total_inventory_value|money }}</h2></div></article>
+  <article class="kpi-card"><span class="kpi-icon red">!</span><div><p>Critical Alerts</p><h2>{{ urgent|length }}</h2></div></article>
+</section>
+<section class="dashboard-grid">
+  <article class="panel chart-panel wide"><div class="panel-heading"><div><p class="eyebrow">Valuation</p><h3>Inventory Value by Category</h3></div></div><canvas id="valueChart"></canvas></article>
+  <article class="panel chart-panel"><div class="panel-heading"><div><p class="eyebrow">Availability</p><h3>Stock by Category</h3></div></div><canvas id="stockChart"></canvas></article>
+  <article class="panel chart-panel"><div class="panel-heading"><div><p class="eyebrow">Expiry</p><h3>Expiry Status</h3></div></div><canvas id="expiryChart"></canvas></article>
+</section>
+<section class="dashboard-lists">
+  <article class="panel table-panel">
+    <div class="panel-heading"><div><p class="eyebrow">Immediate action</p><h3>Critical attention</h3></div><a class="text-link" href="{{ url_for('alerts') }}">View all</a></div>
+    {% if urgent %}
+    <div class="table-wrap"><table><thead><tr><th>Medicine</th><th>Problem</th><th>Stock</th><th>Severity</th></tr></thead><tbody>
+      {% for alert in urgent %}<tr><td><a href="{{ url_for('medicine_details', medicine_id=alert.medicine_id) }}"><strong>{{ alert.medicine_name }}</strong><small>{{ alert.medicine_id }}</small></a></td><td>{{ alert.problem }}</td><td>{{ alert.quantity }}</td><td><span class="badge critical">CRITICAL</span></td></tr>{% endfor %}
+    </tbody></table></div>
+    {% else %}<div class="empty-state">No critical alerts.</div>{% endif %}
+  </article>
+</section>
+<section class="two-column">
+  <article class="panel"><div class="panel-heading"><div><p class="eyebrow">Reorder</p><h3>Low stock</h3></div></div>
+    {% if low_stock %}<ul class="compact-list">{% for medicine in low_stock[:8] %}<li><div><strong>{{ medicine.medicine_name }}</strong><small>{{ medicine.quantity }} / {{ medicine.minimum_stock }} units</small></div><a href="{{ url_for('medicine_details', medicine_id=medicine.medicine_id) }}">View</a></li>{% endfor %}</ul>{% else %}<div class="empty-state">Stock levels are healthy.</div>{% endif %}
+  </article>
+  <article class="panel"><div class="panel-heading"><div><p class="eyebrow">Next 30 days</p><h3>Expiring soon</h3></div></div>
+    {% if expiring %}<ul class="compact-list">{% for medicine in expiring[:8] %}<li><div><strong>{{ medicine.medicine_name }}</strong><small>Expires {{ medicine.expiry_date|display_date }}</small></div><span class="badge warning">Soon</span></li>{% endfor %}</ul>{% else %}<div class="empty-state">No medicines expiring soon.</div>{% endif %}
+  </article>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+const chartData={{ chart_data|tojson }};
+createBarChart("valueChart", chartData.value_by_category.labels, chartData.value_by_category.values, "$");
+createBarChart("stockChart", chartData.stock_by_category.labels, chartData.stock_by_category.values);
+createDoughnutChart("expiryChart", chartData.expiry_distribution.labels, chartData.expiry_distribution.values);
+</script>
+{% endblock %}

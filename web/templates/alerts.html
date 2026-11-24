@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Alerts — MediStock{% endblock %}
+{% block content %}
+<div class="page-heading"><div><p class="eyebrow">Priority attention</p><h1>Alerts</h1></div></div>
+{% for level in ('CRITICAL','WARNING','INFO') %}
+<section class="alert-section"><div class="section-heading"><span class="badge {{ level|lower }}">{{ level }}</span><h2>{{ 'Expired and out of stock' if level=='CRITICAL' else 'Expiring and low stock' if level=='WARNING' else 'Approaching reorder level' }}</h2></div>
+<div class="alert-grid">{% for alert in attention[level] %}<article class="alert-card {{ level|lower }}"><div class="alert-type">{{ alert.issue_type }}</div><h3><a href="{{ url_for('medicine_details', medicine_id=alert.medicine_id) }}">{{ alert.medicine_name }}</a></h3><p>{{ alert.problem }}</p><dl><div><dt>Quantity</dt><dd>{{ alert.quantity }}</dd></div><div><dt>Minimum</dt><dd>{{ alert.minimum_stock }}</dd></div><div><dt>Expiry</dt><dd>{{ alert.display_expiry_date }}</dd></div></dl><div class="alert-action">{{ alert.action }}</div></article>{% else %}<div class="empty-state">No {{ level|lower }} alerts.</div>{% endfor %}</div></section>
+{% endfor %}
+{% endblock %}

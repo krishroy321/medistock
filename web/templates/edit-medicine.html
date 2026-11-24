@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Edit {{ medicine.medicine_name }} — MediStock{% endblock %}
+{% block content %}
+<div class="page-heading"><div><p class="eyebrow">{{ medicine.medicine_id }}</p><h1>Edit Medicine</h1></div><a class="button secondary" href="{{ url_for('medicine_details', medicine_id=medicine.medicine_id) }}">Back to details</a></div>
+<article class="panel form-panel"><form method="post"><input type="hidden" name="_csrf_token" value="{{ csrf_token }}"><div class="form-grid">
+<label>Medicine ID<input value="{{ medicine.medicine_id }}" disabled></label><label>Medicine Name<input name="medicine_name" value="{{ medicine.medicine_name }}" required></label>
+<label>Category<select name="category" required>{% for value in categories %}<option {{ 'selected' if medicine.category==value }}>{{ value }}</option>{% endfor %}</select></label>
+<label>Dosage Form<select name="form" required>{% for value in forms %}<option {{ 'selected' if medicine.form==value }}>{{ value }}</option>{% endfor %}</select></label>
+<label>Manufacturer<input name="manufacturer" value="{{ medicine.manufacturer }}" required></label><label>Batch Number<input name="batch_number" value="{{ medicine.batch_number }}" required></label>
+<label>Quantity<input name="quantity" type="number" min="0" step="1" value="{{ medicine.quantity }}" required></label><label>Minimum Stock<input name="minimum_stock" type="number" min="1" step="1" value="{{ medicine.minimum_stock }}" required></label>
+<label>Unit Price<input name="unit_price" type="number" min="0.01" step="0.01" value="{{ medicine.unit_price }}" required></label><label>Manufacturing Date<input name="manufacturing_date" type="date" value="{{ medicine.manufacturing_date }}" required></label>
+<label>Expiry Date<input name="expiry_date" type="date" value="{{ medicine.expiry_date }}" required></label><label>Supplier<input name="supplier" value="{{ medicine.supplier }}" required></label>
+</div><div class="form-actions"><a class="button secondary" href="{{ url_for('medicine_details', medicine_id=medicine.medicine_id) }}">Cancel</a><button class="button primary" type="submit">Save Changes</button></div></form></article>
+{% endblock %}

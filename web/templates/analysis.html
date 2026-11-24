@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Analytics — MediStock{% endblock %}
+{% block content %}
+<div class="page-heading"><div><p class="eyebrow">Pandas & NumPy</p><h1>Analytics</h1></div></div>
+<section class="kpi-grid analytics-kpis">
+<article class="kpi-card"><span class="kpi-icon blue">$</span><div><p>Mean Unit Price</p><h2>{{ overview.average_unit_price|money }}</h2></div></article><article class="kpi-card"><span class="kpi-icon teal">$</span><div><p>Median Unit Price</p><h2>{{ overview.median_unit_price|money }}</h2></div></article><article class="kpi-card"><span class="kpi-icon violet">σ</span><div><p>Price Std Dev</p><h2>{{ overview.price_std_dev|money }}</h2></div></article><article class="kpi-card"><span class="kpi-icon red">V</span><div><p>Total Inventory Value</p><h2>{{ overview.total_inventory_value|money }}</h2></div></article>
+</section>
+<section class="stat-strip"><div><span>Mean Stock</span><strong>{{ overview.average_stock_quantity }}</strong></div><div><span>Median Stock</span><strong>{{ overview.median_stock_quantity }}</strong></div><div><span>Min Stock</span><strong>{{ overview.min_stock_quantity }}</strong></div><div><span>Max Stock</span><strong>{{ overview.max_stock_quantity }}</strong></div><div><span>25th Percentile Value</span><strong>{{ overview.value_p25|money }}</strong></div><div><span>50th Percentile Value</span><strong>{{ overview.value_p50|money }}</strong></div><div><span>75th Percentile Value</span><strong>{{ overview.value_p75|money }}</strong></div></section>
+<section class="dashboard-grid">
+<article class="panel chart-panel"><div class="panel-heading"><h3>Medicines by Category</h3></div><canvas id="analyticsCategory"></canvas></article>
+<article class="panel chart-panel"><div class="panel-heading"><h3>Stock by Category</h3></div><canvas id="analyticsStock"></canvas></article>
+<article class="panel chart-panel wide"><div class="panel-heading"><h3>Inventory Value by Category</h3></div><canvas id="analyticsValue"></canvas></article>
+<article class="panel chart-panel"><div class="panel-heading"><h3>Expiry Status</h3></div><canvas id="analyticsExpiry"></canvas></article>
+</section>
+<section class="panel table-panel"><div class="panel-heading"><h3>Category Analysis</h3></div><div class="table-wrap"><table><thead><tr><th>Category</th><th>Medicine Count</th><th>Total Units</th><th>Average Stock</th><th>Average Price</th><th>Total Value</th></tr></thead><tbody>{% for row in category_rows %}<tr><td>{{ row.category }}</td><td>{{ row.medicine_count }}</td><td>{{ row.total_units }}</td><td>{{ row.avg_stock|round(2) }}</td><td>{{ row.avg_price|money }}</td><td>{{ row.total_value|money }}</td></tr>{% else %}<tr><td colspan="6">No category data.</td></tr>{% endfor %}</tbody></table></div></section>
+<section class="two-column"><article class="panel table-panel"><div class="panel-heading"><h3>Supplier Analysis</h3></div><div class="table-wrap"><table><thead><tr><th>Supplier</th><th>Medicines</th><th>Units</th><th>Value</th><th>Share</th></tr></thead><tbody>{% for row in supplier_rows %}<tr><td>{{ row.supplier }}</td><td>{{ row.medicine_count }}</td><td>{{ row.total_units }}</td><td>{{ row.total_value|money }}</td><td>{{ row.share|round(1) }}%</td></tr>{% endfor %}</tbody></table></div></article>
+<article class="panel table-panel"><div class="panel-heading"><h3>Top 5 Highest-Value Medicines</h3></div><div class="table-wrap"><table><thead><tr><th>Medicine</th><th>Units</th><th>Unit Price</th><th>Value</th></tr></thead><tbody>{% for row in highest %}<tr><td><strong>{{ row.medicine_name }}</strong><small>{{ row.medicine_id }}</small></td><td>{{ row.quantity }}</td><td>{{ row.unit_price|money }}</td><td>{{ row.total_value|money }}</td></tr>{% endfor %}</tbody></table></div></article></section>
+{% endblock %}
+{% block scripts %}<script>
+const d={{ chart_data|tojson }};
+createDoughnutChart("analyticsCategory",d.categories,d.category_values);
+createBarChart("analyticsStock",d.stock_categories,d.stock_values);
+createBarChart("analyticsValue",d.value_categories,d.value_values,"$");
+createDoughnutChart("analyticsExpiry",d.expiry_labels,d.expiry_values);
+</script>{% endblock %}

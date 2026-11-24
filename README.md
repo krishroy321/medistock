@@ -261,6 +261,34 @@ CRITICAL (6) - Expired medicines & Out-of-stock medicines
 
 ---
 
+## Web Application
+
+MediStock also includes a Flask web interface that uses the existing Python modules and the same `data/medicines.csv` data source.
+
+### Run the website
+
+```bash
+pip install -r requirements.txt
+python3 web/app.py
+```
+
+Open `http://127.0.0.1:5000`. For a production-style WSGI deployment, use a Flask-compatible server and set `MEDISTOCK_SECRET_KEY` to a secure environment value.
+
+### Web routes
+
+- `/` and `/dashboard` - dynamic dashboard and Chart.js visualizations
+- `/medicines` - searchable, filterable inventory table
+- `/medicines/add` - add a medicine
+- `/medicines/<medicine_id>` - medicine details and stock actions
+- `/medicines/<medicine_id>/edit` - edit medicine details
+- `/alerts` - CRITICAL, WARNING, and INFO attention report
+- `/analytics` - Pandas/NumPy category, supplier, inventory, and expiry analysis
+- `/reports` - generate and download CSV, TXT, JSON, and Matplotlib PNG outputs
+
+The web routes call `inventory.py`, `analysis.py`, `data_manager.py`, and `visualization.py`; they do not maintain a separate inventory implementation.
+
+---
+
 ## Future Improvements
 
 - Add batch-level transaction history logging (`sales`, `restocks`, `disposals`) to a separate CSV audit log.
