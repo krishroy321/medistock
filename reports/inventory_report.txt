@@ -1,13 +1,13 @@
 ==============================================================================
                      MEDISTOCK PHARMACY INVENTORY REPORT                      
-                        Generated: 2026-11-25 01:16:47                        
+                        Generated: 2026-11-25 09:29:13                        
 ==============================================================================
 
 1. INVENTORY OVERVIEW
 ------------------------------------------------------------------------------
   Total Medicines           : 40
   Total Stock Units         : 2,915
-  Total Inventory Value     : $10,618.50
+  Total Inventory Value     : ₹100000.50
   Average Unit Price        : $5.38
   Average Stock Quantity    : 72.88 units
   Out-of-Stock Medicines    : 2

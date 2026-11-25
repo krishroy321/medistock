@@ -129,7 +129,7 @@ python visualization.py
                                    MEDISTOCK
                     PHARMACY INVENTORY & EXPIRY ALERT SYSTEM
 ================================================================================
-  Status: 40 medicines | Units: 2,915 | Value: $10,618.50
+  Status: 40 medicines | Units: 2,915 | Value: ₹100000.50
   Alerts: CRITICAL: 6 | WARNING: 14 | INFO: 6
 --------------------------------------------------------------------------------
    1. View all medicines
@@ -236,7 +236,7 @@ CRITICAL (6) - Expired medicines & Out-of-stock medicines
 --------------------------------------------------------------------------------
   Total Medicines           : 40
   Total Stock Units         : 2,915
-  Total Inventory Value     : $10,618.50
+  Total Inventory Value     : ₹100000.50
   Unit Price (Mean / Med)   : $5.38 / $4.45 (Std Dev: $4.67)
   Unit Price Range          : $0.85 to $28.50
   Stock Qty (Mean / Med)    : 72.88 / 52.0 units (Min: 0, Max: 240, Std Dev: 60.83)
