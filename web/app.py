@@ -45,6 +45,7 @@ from models import (
 )
 from utils import (
     classify_expiry_status,
+    format_currency,
     format_display_date,
     validate_medicine_input,
 )
@@ -82,7 +83,7 @@ def display_date(value):
 
 @app.template_filter("money")
 def money(value):
-    return f"${float(value):,.2f}"
+    return format_currency(value)
 
 
 def get_status(medicine):

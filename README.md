@@ -237,13 +237,13 @@ CRITICAL (6) - Expired medicines & Out-of-stock medicines
   Total Medicines           : 40
   Total Stock Units         : 2,915
   Total Inventory Value     : ₹100000.50
-  Unit Price (Mean / Med)   : $5.38 / $4.45 (Std Dev: $4.67)
-  Unit Price Range          : $0.85 to $28.50
+  Unit Price (Mean / Med)   : ₹5.38 / ₹4.45 (Std Dev: ₹4.67)
+  Unit Price Range          : ₹0.85 to ₹28.50
   Stock Qty (Mean / Med)    : 72.88 / 52.0 units (Min: 0, Max: 240, Std Dev: 60.83)
-  Item Value Percentiles    : 25th=$115.42 | 50th=$203.20 | 75th=$337.50
+  Item Value Percentiles    : 25th=₹115.42 | 50th=₹203.20 | 75th=₹337.50
 
   Stock Health Counts       : Out of Stock=2 | Low Stock (<=Min)=8 | Approaching Reorder=10
-  Expiry Health Counts      : Expired=4 (Value at Risk: $377.10) | <=7d=3 | <=30d=8 | Safe=28
+  Expiry Health Counts      : Expired=4 (Value at Risk: ₹377.10) | <=7d=3 | <=30d=8 | Safe=28
 ```
 
 ---

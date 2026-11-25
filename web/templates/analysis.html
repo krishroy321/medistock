@@ -3,7 +3,7 @@
 {% block content %}
 <div class="page-heading"><div><p class="eyebrow">Pandas & NumPy</p><h1>Analytics</h1></div></div>
 <section class="kpi-grid analytics-kpis">
-<article class="kpi-card"><span class="kpi-icon blue">$</span><div><p>Mean Unit Price</p><h2>{{ overview.average_unit_price|money }}</h2></div></article><article class="kpi-card"><span class="kpi-icon teal">$</span><div><p>Median Unit Price</p><h2>{{ overview.median_unit_price|money }}</h2></div></article><article class="kpi-card"><span class="kpi-icon violet">σ</span><div><p>Price Std Dev</p><h2>{{ overview.price_std_dev|money }}</h2></div></article><article class="kpi-card"><span class="kpi-icon red">V</span><div><p>Total Inventory Value</p><h2>{{ overview.total_inventory_value|money }}</h2></div></article>
+<article class="kpi-card"><span class="kpi-icon blue">₹</span><div><p>Mean Unit Price</p><h2>{{ overview.average_unit_price|money }}</h2></div></article><article class="kpi-card"><span class="kpi-icon teal">₹</span><div><p>Median Unit Price</p><h2>{{ overview.median_unit_price|money }}</h2></div></article><article class="kpi-card"><span class="kpi-icon violet">σ</span><div><p>Price Std Dev</p><h2>{{ overview.price_std_dev|money }}</h2></div></article><article class="kpi-card"><span class="kpi-icon red">V</span><div><p>Total Inventory Value</p><h2>{{ overview.total_inventory_value|money }}</h2></div></article>
 </section>
 <section class="stat-strip"><div><span>Mean Stock</span><strong>{{ overview.average_stock_quantity }}</strong></div><div><span>Median Stock</span><strong>{{ overview.median_stock_quantity }}</strong></div><div><span>Min Stock</span><strong>{{ overview.min_stock_quantity }}</strong></div><div><span>Max Stock</span><strong>{{ overview.max_stock_quantity }}</strong></div><div><span>25th Percentile Value</span><strong>{{ overview.value_p25|money }}</strong></div><div><span>50th Percentile Value</span><strong>{{ overview.value_p50|money }}</strong></div><div><span>75th Percentile Value</span><strong>{{ overview.value_p75|money }}</strong></div></section>
 <section class="dashboard-grid">
@@ -20,6 +20,6 @@
 const d={{ chart_data|tojson }};
 createDoughnutChart("analyticsCategory",d.categories,d.category_values);
 createBarChart("analyticsStock",d.stock_categories,d.stock_values);
-createBarChart("analyticsValue",d.value_categories,d.value_values,"$");
+createBarChart("analyticsValue",d.value_categories,d.value_values,"₹");
 createDoughnutChart("analyticsExpiry",d.expiry_labels,d.expiry_values);
 </script>{% endblock %}

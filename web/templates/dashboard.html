@@ -8,7 +8,7 @@
 <section class="kpi-grid">
   <article class="kpi-card"><span class="kpi-icon blue">▦</span><div><p>Total Medicines</p><h2>{{ overview.total_medicines }}</h2></div></article>
   <article class="kpi-card"><span class="kpi-icon teal">▤</span><div><p>Total Stock Units</p><h2>{{ overview.total_stock_units }}</h2></div></article>
-  <article class="kpi-card"><span class="kpi-icon violet">$</span><div><p>Inventory Value</p><h2>{{ overview.total_inventory_value|money }}</h2></div></article>
+  <article class="kpi-card"><span class="kpi-icon violet">₹</span><div><p>Inventory Value</p><h2>{{ overview.total_inventory_value|money }}</h2></div></article>
   <article class="kpi-card"><span class="kpi-icon red">!</span><div><p>Critical Alerts</p><h2>{{ urgent|length }}</h2></div></article>
 </section>
 <section class="dashboard-grid">
@@ -38,7 +38,7 @@
 {% block scripts %}
 <script>
 const chartData={{ chart_data|tojson }};
-createBarChart("valueChart", chartData.value_by_category.labels, chartData.value_by_category.values, "$");
+createBarChart("valueChart", chartData.value_by_category.labels, chartData.value_by_category.values, "₹");
 createBarChart("stockChart", chartData.stock_by_category.labels, chartData.stock_by_category.values);
 createDoughnutChart("expiryChart", chartData.expiry_distribution.labels, chartData.expiry_distribution.values);
 </script>
