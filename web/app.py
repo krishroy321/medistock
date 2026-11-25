@@ -272,7 +272,7 @@ def medicine_details(medicine_id):
         flash("Medicine not found.", "error")
         return redirect(url_for("medicines"))
     expiry_status = classify_expiry_status(medicine["expiry_date"])
-    inventory_value = calculate_inventory_value([medicine])
+    inventory_value = calculate_inventory_value([medicine])["total_value"]
     stock_status = (
         "Out of Stock" if medicine["quantity"] == 0
         else "Low Stock" if medicine["quantity"] <= medicine["minimum_stock"]
